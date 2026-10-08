@@ -51,7 +51,14 @@ button{border:0;font:inherit;cursor:pointer}.icon{background:#fff;border:1px sol
 <script>
 const CATS=[["🍜","Food"],["🏠","Housing"],["🚕","Transport"],["📚","Education"],["🛍️","Shopping"],["🏥","Health"],["✈️","Travel"],["💻","Electronics"],["💰","Salary"],["📦","Others"]];
 const WALLETS=["Alipay","WeChat Pay","Bank China","Cash CNY","BCA","Mandiri","Cash IDR"];
-const FB_CONFIG=null; // Firebase can be enabled later after setup.
+const FB_CONFIG={
+  apiKey:"AIzaSyANXO9o5L-eKdatrGkmrfbjk8nNrcELulM",
+  authDomain:"mymoney-id-cny.firebaseapp.com",
+  projectId:"mymoney-id-cny",
+  storageBucket:"mymoney-id-cny.firebasestorage.app",
+  messagingSenderId:"52876726397",
+  appId:"1:52876726397:web:2a0fa629ae05c968ece114"
+};
 let data=JSON.parse(localStorage.getItem("mymoney_v3")||"null")||{rate:2350,display:"CNY",transactions:[],wallets:WALLETS,budgets:{},recurring:[]};
 let state={type:"expense",currency:"CNY",cat:"Food",query:""};
 let cloud={enabled:false,user:null,unsub:null};
